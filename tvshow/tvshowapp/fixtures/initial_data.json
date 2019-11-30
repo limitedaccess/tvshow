@@ -1,0 +1,270 @@
+[
+    {
+        "model": "tvshowapp.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$150000$zt3dk6vkKSnc$asA3iXhRqwZt1Pp9XhjZ5YAdPX8iqvWSdjSOFn4dk18=",
+            "last_login": "2019-11-30T05:15:31Z",
+            "is_superuser": true,
+            "username": "superadmin",
+            "first_name": "",
+            "last_name": "",
+            "email": "superadmin@tvshow.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2019-11-30T05:15:11Z",
+            "user_type": 1,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "tvshowapp.user",
+        "pk": 3,
+        "fields": {
+            "password": "admin1",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "admin1",
+            "first_name": "",
+            "last_name": "",
+            "email": "admin1@tvshow.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2019-11-30T20:48:50.747Z",
+            "user_type": 1,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "tvshowapp.user",
+        "pk": 4,
+        "fields": {
+            "password": "mentor1",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "mentor1",
+            "first_name": "",
+            "last_name": "",
+            "email": "mentor1@tvshow.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2019-11-30T20:49:18.183Z",
+            "user_type": 2,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "tvshowapp.user",
+        "pk": 5,
+        "fields": {
+            "password": "mentor2",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "mentor2",
+            "first_name": "",
+            "last_name": "",
+            "email": "mentor2@tvshow.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2019-11-30T20:49:38.627Z",
+            "user_type": 2,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "tvshowapp.user",
+        "pk": 6,
+        "fields": {
+            "password": "candidate1",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "candidate1",
+            "first_name": "Mary",
+            "last_name": "Candidate",
+            "email": "candidate1@tvshow.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2019-11-30T20:50:11.818Z",
+            "user_type": 3,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "tvshowapp.user",
+        "pk": 7,
+        "fields": {
+            "password": "candidate2",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "candidate2",
+            "first_name": "John",
+            "last_name": "Candidate",
+            "email": "candidate2@tvshow.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2019-11-30T20:50:11.818Z",
+            "user_type": 3,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "tvshowapp.user",
+        "pk": 8,
+        "fields": {
+            "password": "candidate3",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "candidate3",
+            "first_name": "Jake",
+            "last_name": "Candidate",
+            "email": "candidate3@tvshow.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2019-11-30T20:50:11.818Z",
+            "user_type": 3,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "tvshowapp.team",
+        "pk": 1,
+        "fields": {
+            "team_name": "Mentor1: Team A",
+            "mentor": 4
+        }
+    },
+    {
+        "model": "tvshowapp.team",
+        "pk": 2,
+        "fields": {
+            "team_name": "Mentor1: Team B",
+            "mentor": 4
+        }
+    },
+    {
+        "model": "tvshowapp.team",
+        "pk": 3,
+        "fields": {
+            "team_name": "Mentor2: Team A",
+            "mentor": 5
+        }
+    },
+    {
+        "model": "tvshowapp.candidate",
+        "pk": 6,
+        "fields": {
+            "team": 1
+        }
+    },
+    {
+        "model": "tvshowapp.candidate",
+        "pk": 7,
+        "fields": {
+            "team": 1
+        }
+    },
+    {
+        "model": "tvshowapp.candidate",
+        "pk": 8,
+        "fields": {
+            "team": 3
+        }
+    },
+    {
+        "model": "tvshowapp.performance",
+        "pk": 1,
+        "fields": {
+            "name": "Sone A by candidate1",
+            "candidate": 6,
+            "date": "2019-11-30"
+        }
+    },
+    {
+        "model": "tvshowapp.performance",
+        "pk": 2,
+        "fields": {
+            "name": "Sone B by candidate1",
+            "candidate": 6,
+            "date": "2019-11-30"
+        }
+    },
+    {
+        "model": "tvshowapp.performance",
+        "pk": 3,
+        "fields": {
+            "name": "Sone A by candidate3",
+            "candidate": 8,
+            "date": "2019-11-30"
+        }
+    },
+    {
+        "model": "tvshowapp.performance",
+        "pk": 4,
+        "fields": {
+            "name": "Sone A by candidate2",
+            "candidate": 7,
+            "date": "2019-11-30"
+        }
+    },
+    {
+        "model": "tvshowapp.performancescore",
+        "pk": 1,
+        "fields": {
+            "mentor": 4,
+            "performance": 1,
+            "score": 90
+        }
+    },
+    {
+        "model": "tvshowapp.performancescore",
+        "pk": 2,
+        "fields": {
+            "mentor": 5,
+            "performance": 1,
+            "score": 80
+        }
+    },
+    {
+        "model": "tvshowapp.performancescore",
+        "pk": 3,
+        "fields": {
+            "mentor": 4,
+            "performance": 2,
+            "score": 90
+        }
+    },
+    {
+        "model": "tvshowapp.performancescore",
+        "pk": 4,
+        "fields": {
+            "mentor": 5,
+            "performance": 2,
+            "score": 90
+        }
+    },
+    {
+        "model": "tvshowapp.performancescore",
+        "pk": 5,
+        "fields": {
+            "mentor": 4,
+            "performance": 3,
+            "score": 90
+        }
+    },
+    {
+        "model": "tvshowapp.performancescore",
+        "pk": 6,
+        "fields": {
+            "mentor": 4,
+            "performance": 4,
+            "score": 70
+        }
+    }
+]
