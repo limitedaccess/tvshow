@@ -12,7 +12,15 @@ class TeamDetails extends Component {
             return null;
         }
         this.items = this.props.team.candidates.map((item, key) =>
-            <li className="list-group-item" key={item.pk}>{item.first_name} {item.last_name}</li>
+            <li className="list-group-item" key={item.pk}>{item.first_name} {item.last_name}
+                    <ul className="list-group">
+                    {item.performances.map((perf, key) => {
+                     return (<li className="list-group-item" key={perf.pk}>
+                        {perf.name} at {perf.date} Average Score:{perf.average_score}
+                        </li>);
+                    })}
+                    </ul>
+            </li>
         );
         return (
             <div key={this.props.team.pk}>

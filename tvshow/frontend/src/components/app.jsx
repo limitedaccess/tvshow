@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import { login } from '../actions/auth';
-import { getCandidates, getTeam, selectCandidate, selectTeam } from '../actions/data';
-import CandidateDetails from './candidate';
-import TeamDetails from './candidate';
+import { getCandidates, getTeams, selectCandidate, selectTeam } from '../actions/data';
+import CandidateDetails from './candidate.jsx';
+import TeamDetails from './team.jsx';
 
 class App extends Component {
   static propTypes = {
@@ -32,7 +32,7 @@ class App extends Component {
     }
     if (this.props.user && this.props.user.user_type == 1 && !this.props.teams ) {
       this.props.getTeams(this.props.user.token);
-  }
+    }
    }
 
   onSubmit = (e) => {
@@ -98,7 +98,9 @@ class App extends Component {
       return null;
     }
     this.items = this.props.teams.map((item, key) =>
-      <li className="list-group-item" key={item.pk}>{item.team_name} Mentor: {item.mentor_name} Average Score:{item.team_average}</li>
+      <li className="list-group-item" key={item.pk}
+        onClick={() => this.showTeamModal(item)}
+      >{item.team_name} Mentor: {item.mentor_name} Average Score:{item.team_average}</li>
     );
     return (
       <div>
