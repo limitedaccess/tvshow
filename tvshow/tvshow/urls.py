@@ -28,7 +28,6 @@ from frontend import urls as frontend_urls
 urlpatterns = [
     path('', include(frontend_urls)),
     path('admin/', admin.site.urls),
-    path('accounts/', include('django.contrib.auth.urls')),
     path('api/candidates/', views.CandidateList.as_view()),
     path('api/candidates/<int:pk>/', views.CandidateDetail.as_view()),
     path('api/teams/', views.TeamList.as_view()),
