@@ -18,6 +18,7 @@ class App extends Component {
     this.state = {
       username: '',
       password: '',
+      search: null,
       showCandidateModalBox: false,
       showTeamModalBox: false,
     };
@@ -97,14 +98,20 @@ class App extends Component {
     if (!this.props.teams) {
       return null;
     }
-    this.items = this.props.teams.map((item, key) =>
+    const list = this.props.teams.filter(t => this.state.search ? t.team_name.includes(this.state.search): t);
+    this.items = list.map((item, key) =>
       <li className="list-group-item" key={item.pk}
         onClick={() => this.showTeamModal(item)}
-      >{item.team_name} Mentor: {item.mentor_name} Average Score:{item.team_average}</li>
+      >{item.team_name} Mentor: {item.mentor_name} Average Score:{item.team_average}
+      </li>
     );
     return (
       <div>
         <h2>Team List</h2>
+        <div>
+          <input type='text' placeholder='type in team name' 
+            onChange={e => this.setState({ search: e.target.value })} />
+        </div>
         <ul className="list-group">
           {this.items}
         </ul>
